@@ -107,7 +107,7 @@ export function Home() {
         </div>
       </section>
       <section className="px-4 pt-20 pb-48">
-        <div className="container mx-auto">
+        <div id="our" className="container mx-auto">
           <PageTitle section="Our Team" heading="Here are our heroes">
             According to the National Oceanic and Atmospheric Administration,
             Ted, Scambos, NSIDClead scentist, puts the potentially record
