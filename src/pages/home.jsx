@@ -65,7 +65,7 @@ export function Home() {
                 className="mb-3 font-bold"
                 color="blue-gray"
               >
-                Working with us is a pleasure
+                Working with us is a absolute pleasure
               </Typography>
               <Typography className="mb-8 font-normal text-blue-gray-500">
                 Don't let your uses guess by attaching tooltips and popoves to
