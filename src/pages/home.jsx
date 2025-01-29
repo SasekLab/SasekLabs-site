@@ -32,7 +32,9 @@ export function Home() {
                 Your story starts with us.
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-              ⚡Say goodbye to oudated systems and low productivity. Our cutting-edge technology transforms your work-saving you time and of course-money🤑
+                This is a simple example of a Landing Page you can build using
+                Material Tailwind. It features multiple components based on the
+                Tailwind CSS and Material Design by Google.
               </Typography>
             </div>
           </div>
