@@ -61,15 +61,27 @@ export function Navbar({ brandName, routes, action }) {
   );
 
   return (
-    <MTNavbar color="transparent" className="p-3 overflow-hidden">
-      <div className=" mx-auto flex items-center justify-between text-white">
+    <MTNavbar color="transparent" className="p-3">
+      <div className="container mx-auto flex items-center justify-between text-white">
         <Link to="/">
           <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
             {brandName}
           </Typography>
         </Link>
         <div className="hidden lg:block">{navList}</div>
-       
+        <div className="hidden gap-2 lg:flex">
+          <a
+            href="https://www.material-tailwind.com/blocks?ref=mtkr"
+            target="_blank"
+          >
+            <Button variant="text" size="sm" color="white" fullWidth>
+              pro version
+            </Button>
+          </a>
+          {React.cloneElement(action, {
+            className: "hidden lg:inline-block",
+          })}
+        </div>
         <IconButton
           variant="text"
           size="sm"
@@ -84,7 +96,26 @@ export function Navbar({ brandName, routes, action }) {
           )}
         </IconButton>
       </div>
-     
+      <MobileNav
+        className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900"
+        open={openNav}
+      >
+        <div className="container mx-auto">
+          {navList}
+          <a
+            href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
+            target="_blank"
+            className="mb-2 block"
+          >
+            <Button variant="text" size="sm" fullWidth>
+              pro version
+            </Button>
+          </a>
+          {React.cloneElement(action, {
+            className: "w-full block",
+          })}
+        </div>
+      </MobileNav>
     </MTNavbar>
   );
 }
