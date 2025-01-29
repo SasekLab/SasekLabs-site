@@ -34,7 +34,7 @@ export function Home() {
               <Typography variant="lead" color="white" className="opacity-80">
                 This is a simple example of a Landing Page you can build using
                 Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
+                The SIte is devleloped by Sasek Labs
               </Typography>
             </div>
           </div>
