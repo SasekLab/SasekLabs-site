@@ -32,9 +32,9 @@ export function Home() {
                 Your story starts with us.
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-                This is a simple example of a Landing Page you can build using
-                Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
+                We provide your business, be it a small and midsize business
+                with a faster, Go-To-Market-strategy for improved efficiency and
+                productivity leveraging digital technology
               </Typography>
             </div>
           </div>
@@ -89,7 +89,13 @@ export function Home() {
                   />
                 </CardHeader>
                 <CardBody>
-                  <Typography variant="small" color="blue-gray" className="font-normal">Enterprise</Typography>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    Enterprise
+                  </Typography>
                   <Typography
                     variant="h5"
                     color="blue-gray"
