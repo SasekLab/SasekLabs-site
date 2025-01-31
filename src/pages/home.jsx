@@ -68,14 +68,17 @@ export function Home() {
                 Working with us is a pleasure
               </Typography>
               <Typography className="mb-8 font-normal text-blue-gray-500">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
+                At SasekLabs, we believe technology should make your work
+                easier, not harder. Our solutions are designed to enhance
+                productivity and efficiency, helping you achieve more with less
+                effort. Whether you're streamlining operations, automating
+                tasks, or improving collaboration, we deliver seamless,
+                user-friendly tools that fit right into your workflow.
                 <br />
                 <br />
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
+                We don’t just provide tech—we create experiences that make work
+                smoother, smarter, and more enjoyable. Partner with us and
+                transform the way you work.
               </Typography>
               <Button variant="filled">read more</Button>
             </div>
@@ -84,7 +87,7 @@ export function Home() {
                 <CardHeader floated={false} className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="/img/teamwork.png"
+                    src="/img/cardimg.jpeg"
                     className="h-full w-full"
                   />
                 </CardHeader>
