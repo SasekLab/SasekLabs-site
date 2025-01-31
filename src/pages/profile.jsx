@@ -51,7 +51,7 @@ export function Profile() {
 
               <div className="mt-10 mb-10 flex lg:flex-col justify-between items-center lg:justify-end lg:mb-0 lg:px-4 flex-wrap lg:-mt-5">
                 <Button className="bg-gray-900 w-fit lg:ml-auto">
-                  Conntect
+                  Connect
                 </Button>
                 <div className="flex justify-start py-4 pt-8 lg:pt-4">
                   <div className="mr-4 p-3 text-center">
@@ -106,32 +106,27 @@ export function Profile() {
               <div className="flex items-center gap-2">
                 <MapPinIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
                 <Typography className="font-medium text-blue-gray-500">
-                  Los Angeles, California
+                  Accra,Ghana
                 </Typography>
               </div>
               <div className="flex items-center gap-2">
                 <BriefcaseIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
                 <Typography className="font-medium text-blue-gray-500">
-                  Solution Manager - Creative Tim Officer
+                  Tech startup
                 </Typography>
               </div>
               <div className="flex items-center gap-2">
                 <BuildingLibraryIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
                 <Typography className="font-medium text-blue-gray-500">
-                  University of Computer Science
+                  University of Ghana, Legon
                 </Typography>
               </div>
             </div>
             <div className="mb-10 py-6">
               <div className="flex w-full flex-col items-start lg:w-1/2">
                 <Typography className="mb-6 font-normal text-blue-gray-500">
-                  An artist of considerable range, Jenna the name taken by
-                  Melbourne-raised, Brooklyn-based Nick Murphy writes, performs
-                  and records all of his own music, giving it a warm, intimate
-                  feel with a solid groove structure. An artist of considerable
-                  range.
+                  A tech startup based in Ghana that uses innovative solutions in the tech world to drive productivity of businesses, SMEs, companies. 
                 </Typography>
-                <Button variant="text">Show more</Button>
               </div>
             </div>
           </div>
