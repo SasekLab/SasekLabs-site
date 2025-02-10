@@ -120,10 +120,9 @@ export function Home() {
       </section>
       <section className="px-4 pt-20 pb-48">
         <div id="our" className="container mx-auto">
-          <PageTitle section="Services" heading="Here are our heroes">
-            According to the National Oceanic and Atmospheric Administration,
-            Ted, Scambos, NSIDClead scentist, puts the potentially record
-            maximum.
+          <PageTitle section="Our Services" heading="Here is the value we bring to your business">
+          At SasekLabs, we help small and medium-sized businesses thrive in the digital age. 
+          Our innovative tech solutions are designed to streamline operations, enhance customer experiences, and drive growth.
           </PageTitle>
           <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
             {teamData.map(({ img, name, position, socials }) => (
@@ -151,7 +150,7 @@ export function Home() {
           <PageTitle section="Our Core Values" heading="What we stand for">
             These are the values we stand for as a team. They represent what
             drives us as a team and how we approach every project and client
-            relationship. Hardwork, Innovation, Passion, and Quality is what
+            relationship. Passion, Quest for Quality, Innovation,forged from Collaboration is what
             drives us as a team.
           </PageTitle>
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 justify-center ">

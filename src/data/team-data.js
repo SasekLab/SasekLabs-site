@@ -1,27 +1,8 @@
 export const teamData = [
   {
-    img: "/img/ser1.jpeg",
-    name: "Ryan Tompson",
-    position: "Web Developer",
-    socials: [
-      {
-        color: "light-blue",
-        name: "twitter",
-      },
-      {
-        color: "blue",
-        name: "linkedin",
-      },
-      {
-        color: "pink",
-        name: "dribbble",
-      },
-    ],
-  },
-  {
     img: "/img/ser2.jpeg",
-    name: "Romina Hadid",
-    position: "Marketing Specialist",
+    name: "Business Automation",
+    position: "Optimize workflows, reduce manual tasks, and increase efficiency with smart automation tools",
     socials: [
       {
         color: "light-blue",
@@ -39,8 +20,8 @@ export const teamData = [
   },
   {
     img: "/img/ser3.jpeg",
-    name: "Alexa Smith",
-    position: "UI/UX Designer",
+    name: "Custom Software Development",
+    position: "Tailored solutions to fit your business needs, from web and mobile apps to enterprise systems.",
     socials: [
       {
         color: "light-blue",
@@ -58,8 +39,8 @@ export const teamData = [
   },
   {
     img: "/img/ser4.jpeg",
-    name: "Jenna Kardi",
-    position: "Founder and CEO",
+    name: "E-commerce & Website Solutions",
+    position: "Get a sleek, high-performing online presence that attracts and converts customers.",
     socials: [
       {
         color: "light-blue",
@@ -75,6 +56,25 @@ export const teamData = [
       },
     ],
   },
+  {
+    img: "/img/service2.jpeg",
+    name: "Technical Documentation",
+    position: "We create precise, user-friendly documentation to streamline processes and enhance clarity for your business.",
+    socials: [
+      {
+        color: "light-blue",
+        name: "twitter",
+      },
+      {
+        color: "blue",
+        name: "linkedin",
+      },
+      {
+        color: "pink",
+        name: "dribbble",
+      },
+    ],
+  }
 ];
 
 export default teamData;
