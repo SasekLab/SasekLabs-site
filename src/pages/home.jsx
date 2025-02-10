@@ -80,7 +80,7 @@ export function Home() {
                 smoother, smarter, and more enjoyable. Partner with us and
                 transform the way you work.
               </Typography>
-              <Button variant="filled">read more</Button>
+              {/* <Button variant="filled">read more</Button> */}
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
@@ -97,7 +97,7 @@ export function Home() {
                     color="blue-gray"
                     className="font-normal"
                   >
-                    Enterprise
+                    SasekLabs
                   </Typography>
                   <Typography
                     variant="h5"
@@ -107,9 +107,10 @@ export function Home() {
                     Top Notch Services
                   </Typography>
                   <Typography className="font-normal text-blue-gray-500">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
+                    Efficiency meets innovation with our cutting-edge technology
+                    solutions. We empower businesses with seamless automation,
+                    enhanced collaboration, and data-driven insights—helping you
+                    stay ahead in a fast-evolving digital world.
                   </Typography>
                 </CardBody>
               </Card>
@@ -119,7 +120,7 @@ export function Home() {
       </section>
       <section className="px-4 pt-20 pb-48">
         <div id="our" className="container mx-auto">
-          <PageTitle section="Our Team" heading="Here are our heroes">
+          <PageTitle section="Services" heading="Here are our heroes">
             According to the National Oceanic and Atmospheric Administration,
             Ted, Scambos, NSIDClead scentist, puts the potentially record
             maximum.
@@ -131,15 +132,15 @@ export function Home() {
                 img={img}
                 name={name}
                 position={position}
-                socials={
-                  <div className="flex items-center gap-2">
-                    {socials.map(({ color, name }) => (
-                      <IconButton key={name} color={color} variant="text">
-                        <i className={`fa-brands text-xl fa-${name}`} />
-                      </IconButton>
-                    ))}
-                  </div>
-                }
+                // socials={
+                //   <div className="flex items-center gap-2">
+                //     {socials.map(({ color, name }) => (
+                //       <IconButton key={name} color={color} variant="text">
+                //         <i className={`fa-brands text-xl fa-${name}`} />
+                //       </IconButton>
+                //     ))}
+                //   </div>
+                // }
               />
             ))}
           </div>
@@ -147,12 +148,13 @@ export function Home() {
       </section>
       <section className="relative bg-white py-24 px-4">
         <div className="container mx-auto">
-          <PageTitle section="Co-Working" heading="Build something">
-            Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos.
+          <PageTitle section="Our Core Values" heading="What we stand for">
+            These are the values we stand for as a team. They represent what
+            drives us as a team and how we approach every project and client
+            relationship. Hardwork, Innovation, Passion, and Quality is what
+            drives us as a team.
           </PageTitle>
-          <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 justify-center ">
             {contactData.map(({ title, icon, description }) => (
               <Card
                 key={title}
@@ -179,10 +181,28 @@ export function Home() {
           </PageTitle>
           <form className="mx-auto w-full mt-12 lg:w-5/12">
             <div className="mb-8 flex gap-8">
-              <Input variant="outlined" size="lg" label="Full Name" />
-              <Input variant="outlined" size="lg" label="Email Address" />
+              <Input
+                variant="outlined"
+                size="lg"
+                label="Full Name"
+                type="text"
+                required
+              />
+              <Input
+                variant="outlined"
+                size="lg"
+                label="Email Address"
+                required
+                type="email"
+              />
             </div>
-            <Textarea variant="outlined" size="lg" label="Message" rows={8} />
+            <Textarea
+              variant="outlined"
+              size="lg"
+              label="Message"
+              rows={8}
+              required
+            />
             <Checkbox
               label={
                 <Typography
@@ -199,9 +219,16 @@ export function Home() {
                   </a>
                 </Typography>
               }
+              required
               containerProps={{ className: "-ml-2.5" }}
             />
-            <Button variant="gradient" size="lg" className="mt-8" fullWidth>
+            <Button
+              variant="gradient"
+              size="lg"
+              className="mt-8"
+              fullWidth
+              type="submit"
+            >
               Send Message
             </Button>
           </form>

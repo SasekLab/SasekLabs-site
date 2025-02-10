@@ -1,6 +1,6 @@
 export const teamData = [
   {
-    img: "/img/team-1.jpg",
+    img: "/img/ser1.jpeg",
     name: "Ryan Tompson",
     position: "Web Developer",
     socials: [
@@ -19,7 +19,7 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-2.jpg",
+    img: "/img/ser2.jpeg",
     name: "Romina Hadid",
     position: "Marketing Specialist",
     socials: [
@@ -38,7 +38,7 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-3.jpg",
+    img: "/img/ser3.jpeg",
     name: "Alexa Smith",
     position: "UI/UX Designer",
     socials: [
@@ -57,7 +57,7 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-4.png",
+    img: "/img/ser4.jpeg",
     name: "Jenna Kardi",
     position: "Founder and CEO",
     socials: [
