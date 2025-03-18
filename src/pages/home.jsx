@@ -14,30 +14,39 @@ import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
+import emailjs from "@emailjs/browser";
 
 export function Home() {
+  const form = React.useRef();
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [name, setName] = React.useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    var params = {
+      service_id: "service_anwwz9h",
+      template_id: "template_znpvy2t",
+      public_key: "vVw_ZNRtba3Y2eBzK",
+      template_params: {
+        name: name,
+        email: email,
+        message: message,
+      },
+    };
+
     try {
-      // await fetch("/api/submit-contact-form", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     name,
-      //     email,
-      //     message,
-      //   }),
-      // });
-      alert("Your message has been sent successfully!");
-      setName("");
-      setEmail("");
-      setMessage("");
+      await emailjs
+        .sendForm(params.service_id, params.template_id, {
+          publicKey: params.public_key,
+        })
+        .then(() => {
+          alert("Your message has been sent successfully!");
+          setName("");
+          setEmail("");
+          setMessage("");
+        });
     } catch (error) {
       console.error(error);
     }
@@ -210,7 +219,11 @@ export function Home() {
           <PageTitle section="Contact Us" heading="Want to work with us?">
             Complete this form and we will get back to you in 24 hours.
           </PageTitle>
-          <form className="mx-auto w-full mt-12 lg:w-5/12">
+          <form
+            className="mx-auto w-full mt-12 lg:w-5/12"
+            onSubmit={handleSubmit}
+            ref={form}
+          >
             <div className="mb-8 flex gap-8 sm:flex-wrap">
               <div className="w-full">
                 <Input
@@ -219,6 +232,7 @@ export function Home() {
                   label="Full Name"
                   type="text"
                   required
+                  name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -229,6 +243,7 @@ export function Home() {
                   size="lg"
                   label="Email Address"
                   required
+                  name="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -239,6 +254,7 @@ export function Home() {
               variant="outlined"
               size="lg"
               label="Message"
+              name="message"
               rows={8}
               required
               value={message}
@@ -269,7 +285,6 @@ export function Home() {
               className="mt-8"
               fullWidth
               type="submit"
-              onClick={handleSubmit}
             >
               Send Message
             </Button>
