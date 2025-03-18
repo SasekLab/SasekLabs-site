@@ -28,25 +28,44 @@ export function Home() {
     var params = {
       service_id: "service_anwwz9h",
       template_id: "template_znpvy2t",
-      public_key: "vVw_ZNRtba3Y2eBzK",
-      template_params: {
-        name: name,
-        email: email,
-        message: message,
-      },
     };
 
-    try {
-      await emailjs
-        .sendForm(params.service_id, params.template_id, {
-          publicKey: params.public_key,
-        })
-        .then(() => {
+    
+    var cont = {
+      public_Key: "vVw_ZNRtba3Y2eBzK",
+      name: name,
+      email: email,
+      message: message,
+    };
+    emailjs
+      .sendForm(params.service_id, params.template_id, form.current, cont.public_Key)
+      .then(
+        () => {
+          console.log("SUCCESS!");
           alert("Your message has been sent successfully!");
-          setName("");
-          setEmail("");
-          setMessage("");
-        });
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
+    try {
+      // await fetch("/api/submit-contact-form", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     name,
+      //     email,
+      //     message,
+      //   }),
+      // });
+
+      // alert("Your message has been sent successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
     } catch (error) {
       console.error(error);
     }
