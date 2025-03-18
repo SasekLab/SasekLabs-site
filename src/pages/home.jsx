@@ -16,6 +16,33 @@ import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 
 export function Home() {
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [name, setName] = React.useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // await fetch("/api/submit-contact-form", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     name,
+      //     email,
+      //     message,
+      //   }),
+      // });
+      alert("Your message has been sent successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32 w-screen overflow-hidden">
@@ -120,9 +147,14 @@ export function Home() {
       </section>
       <section className="px-4 pt-20 pb-48">
         <div id="our" className="container mx-auto">
-          <PageTitle section="Our Services" heading="Here is the value we bring to your business">
-          At SasekLabs, we help small and medium-sized businesses thrive in the digital age. 
-          Our innovative tech solutions are designed to streamline operations, enhance customer experiences, and drive growth.
+          <PageTitle
+            section="Our Services"
+            heading="Here is the value we bring to your business"
+          >
+            At SasekLabs, we help small and medium-sized businesses thrive in
+            the digital age. Our innovative tech solutions are designed to
+            streamline operations, enhance customer experiences, and drive
+            growth.
           </PageTitle>
           <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
             {teamData.map(({ img, name, position, socials }) => (
@@ -150,8 +182,8 @@ export function Home() {
           <PageTitle section="Our Core Values" heading="What we stand for">
             These are the values we stand for as a team. They represent what
             drives us as a team and how we approach every project and client
-            relationship. Passion, Quest for Quality, Innovation,forged from Collaboration is what
-            drives us as a team.
+            relationship. Passion, Quest for Quality, Innovation,forged from
+            Collaboration is what drives us as a team.
           </PageTitle>
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 justify-center ">
             {contactData.map(({ title, icon, description }) => (
@@ -179,21 +211,29 @@ export function Home() {
             Complete this form and we will get back to you in 24 hours.
           </PageTitle>
           <form className="mx-auto w-full mt-12 lg:w-5/12">
-            <div className="mb-8 flex gap-8">
-              <Input
-                variant="outlined"
-                size="lg"
-                label="Full Name"
-                type="text"
-                required
-              />
-              <Input
-                variant="outlined"
-                size="lg"
-                label="Email Address"
-                required
-                type="email"
-              />
+            <div className="mb-8 flex gap-8 sm:flex-wrap">
+              <div className="w-full">
+                <Input
+                  variant="outlined"
+                  size="lg"
+                  label="Full Name"
+                  type="text"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="w-full">
+                <Input
+                  variant="outlined"
+                  size="lg"
+                  label="Email Address"
+                  required
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
             </div>
             <Textarea
               variant="outlined"
@@ -201,6 +241,8 @@ export function Home() {
               label="Message"
               rows={8}
               required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
             <Checkbox
               label={
@@ -227,6 +269,7 @@ export function Home() {
               className="mt-8"
               fullWidth
               type="submit"
+              onClick={handleSubmit}
             >
               Send Message
             </Button>
