@@ -243,7 +243,7 @@ export function Home() {
             onSubmit={handleSubmit}
             ref={form}
           >
-            <div className="mb-8 flex gap-8 sm:flex-wrap">
+            <div className="mb-8 flex gap-8 flex-wrap">
               <div className="w-full">
                 <Input
                   variant="outlined"
