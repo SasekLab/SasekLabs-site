@@ -30,42 +30,33 @@ export function Home() {
       template_id: "template_znpvy2t",
     };
 
-    
     var cont = {
       public_Key: "vVw_ZNRtba3Y2eBzK",
       name: name,
       email: email,
       message: message,
     };
-    emailjs
-      .sendForm(params.service_id, params.template_id, form.current, cont.public_Key)
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          alert("Your message has been sent successfully!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
 
     try {
-      // await fetch("/api/submit-contact-form", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     name,
-      //     email,
-      //     message,
-      //   }),
-      // });
-
-      // alert("Your message has been sent successfully!");
-      setName("");
-      setEmail("");
-      setMessage("");
+      emailjs
+        .sendForm(
+          params.service_id,
+          params.template_id,
+          form.current,
+          cont.public_Key
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            alert("Your message has been sent successfully!");
+            setName("");
+            setEmail("");
+            setMessage("");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
     } catch (error) {
       console.error(error);
     }
@@ -243,8 +234,8 @@ export function Home() {
             onSubmit={handleSubmit}
             ref={form}
           >
-            <div className="mb-8 flex gap-8 sm:flex-wrap">
-              <div className="w-full">
+            <div className="mb-8  gap-8 sm:flex-wrap sm:grid sm:grid-cols-1">
+              <div className="w-full mb-6 lg:mb-0 md:mb-0 sm:mb-8">
                 <Input
                   variant="outlined"
                   size="lg"
