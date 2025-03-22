@@ -129,7 +129,7 @@ export function Home() {
               {/* <Button variant="filled">read more</Button> */}
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
-              <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
+              <Card className="shadow-lg border shadow-gray-500/10 rounded-2xl">
                 <CardHeader floated={false} className="relative h-56">
                   <img
                     alt="Card Image"
