@@ -57,7 +57,7 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/service2.jpeg",
+    img: "/img/service3.jpg",
     name: "Technical Documentation",
     position: "We create precise, user-friendly documentation to streamline processes and enhance clarity for your business.",
     socials: [

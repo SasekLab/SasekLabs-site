@@ -108,7 +108,7 @@ Footer.defaultProps = {
     {
       name: "useful links",
       items: [
-        { name: "About Us", path: "" },
+        // { name: "About Us", path: "" },
         { name: "Blog", path: "https://www.creative-tim.com/blog" },
         {
           name: "Github",
